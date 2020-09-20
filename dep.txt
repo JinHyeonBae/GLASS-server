@@ -1,0 +1,1 @@
+yarn add bcrypt class-validator cors dotenv graphql-tools graphql-yoga helmet jsonwebtoken mailgun-js merge-graphql-schemas morgan pg twilio typeorm

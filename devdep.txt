@@ -1,0 +1,1 @@
+yarn add --dev @types/bcrypt @types/jsonwebtoken @types/mailgun-js @types/node @types/twilio babel-runtime gql-merge graphql-to-typescript nodemon ts-node tslint-config-prettier typescript

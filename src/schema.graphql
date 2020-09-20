@@ -1,0 +1,17 @@
+type SayHelloResponse {
+  text: String!
+  error: Boolean!
+}
+
+type Query {
+  sayHello(name: String!): SayHelloResponse!
+  user: User
+}
+
+type User {
+  id: Int!
+  email: String
+  password: String!
+  createdAt: String!
+  updatedAt: String!
+}
