@@ -1,11 +1,11 @@
-type SayHelloResponse {
-  text: String!
-  error: Boolean!
+type RegisterResponse {
+  ok: Boolean!
+  error: String
+  token: String
 }
 
-type Query {
-  sayHello(name: String!): SayHelloResponse!
-  user: User
+type Mutation {
+  Register(email: String!, password: String!): RegisterResponse!
 }
 
 type User {
@@ -14,4 +14,18 @@ type User {
   password: String!
   createdAt: String!
   updatedAt: String!
+}
+
+type Query {
+  user: User
+}
+
+type Verification {
+  id: Int!
+  target: String!
+  payload: String!
+  key: String!
+  verified: Boolean!
+  createdAt: String!
+  updatedAt: String
 }

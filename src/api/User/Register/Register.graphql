@@ -1,0 +1,9 @@
+type RegisterResponse {
+  ok: Boolean!
+  error: String
+  token: String
+}
+
+type Mutation {
+  Register(email: String!, password: String!): RegisterResponse!
+}
