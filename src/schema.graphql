@@ -1,12 +1,19 @@
+type CompleteEmailVerificationResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  CompleteEmailVerification(key: String!): CompleteEmailVerificationResponse!
+  Login(email: String!, password: String!): LoginResponse!
+  Register(firstName: String!, lastName: String!, email: String!, password: String!): RegisterResponse!
+  RequestEmailVerification: RequestEmailVerificationResponse!
+}
+
 type LoginResponse {
   ok: Boolean!
   error: String
   token: String
-}
-
-type Mutation {
-  Login(email: String!, password: String!): LoginResponse!
-  Register(email: String!, password: String!): RegisterResponse!
 }
 
 type RegisterResponse {
@@ -15,9 +22,16 @@ type RegisterResponse {
   token: String
 }
 
+type RequestEmailVerificationResponse {
+  ok: Boolean!
+  error: String
+}
+
 type User {
   id: Int!
   email: String
+  firstName: String!
+  lastName: String!
   password: String!
   createdAt: String!
   updatedAt: String!
